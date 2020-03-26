@@ -7,7 +7,7 @@
 set -eo pipefail
 
 # replace this list with all the expected commands in path
-readonly required=( source bind ) 
+readonly requires=( source bind ) 
 
 function info () {
     echo -e "[\e[34;1mINFO\e[0m] $@"
@@ -26,10 +26,10 @@ function failure () {
 }
 
 function check_required() {
-    for cmd in "${required[@]}"; do
+    for cmd in "${requires[@]}"; do
         command -v ${cmd} &>/dev/null \
             || ( error "command '${cmd}' not found: \
-This script requires: ${required[@]}" \
+This script requires: ${requires[@]}" \
                      && exit 1 )
     done
 }
