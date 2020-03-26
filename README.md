@@ -1,2 +1,2 @@
-# scaffolding
-Variety of scripts, project templates for different languages and goals
+# scaffolding-shell
+Scaffolding code for shell scripts.
