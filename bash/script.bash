@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
+#
+# This is an example bash script.
+# 
+# Code Style: https://google.github.io/styleguide/shellguide.html
+#
 set -eo pipefail
 
-readonly required=( top  missing )
+# replace this list with all the expected commands in path
+readonly required=( source bind ) 
 
 function info () {
     echo -e "[\e[34;1mINFO\e[0m] $@"
