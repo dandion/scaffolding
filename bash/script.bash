@@ -25,6 +25,10 @@ function failure () {
     echo -e "[\e[31;1mFAIL\e[0m] $@"
 }
 
+function timestamp () {
+   date "+%S%m%d%H%M%Y"
+}
+
 function check_required() {
     for cmd in "${requires[@]}"; do
         command -v ${cmd} &>/dev/null \
