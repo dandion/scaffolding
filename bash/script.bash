@@ -4,7 +4,7 @@
 # 
 # Code Style: https://google.github.io/styleguide/shellguide.html
 #
-set -eo pipefail
+set -euo pipefail
 
 # replace this list with all the expected commands in path
 readonly requires=( source bind ) 
